@@ -29,3 +29,13 @@ def double_numbers(number: int):
     return {"calculate":f"doulbed to {doubled_number}"}
 
 
+@app.get("/shop")
+def online_store(item: str, size: str = "Medium"):
+    return {
+        "ordered_item": item,
+        "selected_size": size,
+        "status": "Item added to cart successfully!"
+    }
+
+
+
