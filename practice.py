@@ -19,3 +19,13 @@ def about_me():
 @app.get("/greet/{name}")
 def greet_person(name: str):
     return {"messae":f"hello {name}"}
+
+
+
+
+@app.get("/double/{number}")
+def double_numbers(number: int):
+    doubled_number = number*2
+    return {"calculate":f"doulbed to {doubled_number}"}
+
+
