@@ -61,3 +61,21 @@ def read_products(db: Session = Depends(get_db)):
     # Query the database to get all records from the products table
     all_products = db.query(DBProduct).all()
     return {"total_in_db": len(all_products), "catalog": all_products}
+
+
+
+# Building a DELETE endpoint to delete a product by its ID
+@app.delete("/products/{product_id}")
+def delete_product(product_id: int, db: Session = Depends(get_db)):
+    # 1. Look for the product in the database by its ID
+    db_product = db.query(DBProduct).filter(DBProduct.id == product_id).first()
+    
+    # 2. If it's not found, raise a clean 404 Error
+    if db_product is None:
+        raise HTTPException(status_code=404, detail="Product not found in catalog")
+    
+    # 3. If found, remove it from the session and save the change
+    db.delete(db_product)
+    db.commit()
+    
+    return {"message": f"Product '{db_product.name}' was successfully deleted!"}
