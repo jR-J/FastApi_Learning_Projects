@@ -21,7 +21,7 @@ def calculate_fare(fare: FareEstimate):
     # Rush hour 500 ugx
     if fare.is_rush_hour:
         total_fare = total_fare + 500
-
+ 
     return{
         "Passenger": fare.passenger_name,
         "Distance_km": f"{distance_cost:.2f}",
@@ -35,3 +35,4 @@ def get_estimator():
         "message": "Welcome to the fare estimator API",
         "info": "Use the POST method to calculate fare estimates"
     }
+
