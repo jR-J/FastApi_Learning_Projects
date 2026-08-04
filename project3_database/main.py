@@ -35,6 +35,7 @@ class DBProduct(Base):
 
 # Pydantic model for request and response validation
 class ProductCreate(BaseModel):
+
     name: str
     price: float
     item_code: str
@@ -55,7 +56,7 @@ def create_product(product: ProductCreate, db: Session = Depends(get_db)):
     db.add(db_product)      # Stage the product to be added
     db.commit()           # Commit/save the change permanently to the database file
     db.refresh(db_product) # Refresh the object to read its new auto-generated ID
-    return {"message": "Saved to database!", "product": {"id": db_product.id, "name": db_product.name}}
+    return {"message": "Saved to database!", "product": {"id": db_product.id, "name": db_product.name, "item_code": db_product.item_code}}
 
 @app.get("/products")
 def read_products(db: Session = Depends(get_db)):
