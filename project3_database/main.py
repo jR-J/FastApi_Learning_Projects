@@ -49,6 +49,7 @@ def create_product(product: ProductCreate, db: Session = Depends(get_db)):
     db_product = DBProduct(
         name=product.name,
         price=product.price,
+        item_code=product.item_code,
         in_stock=product.in_stock
     )
     db.add(db_product)      # Stage the product to be added
