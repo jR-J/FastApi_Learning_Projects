@@ -13,6 +13,7 @@ This repo contains 3 main projects + several practice scripts
 ## PROJECTS BREAKDOWN
 
 ### 1. project1_script_tracker
+Currently writing a comic script, so got inspired:
 Users fill in Volume number, title and pages for their Movie or comic script
 Focus: For learning storing items in a temp database and connecting to basic API structure
 
