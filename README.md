@@ -2,7 +2,7 @@ A collection of beginner to intermediate FastAPI projects to Learn API developme
 ### WHY THE PROJECT
 This repo is solely to help me learn Backend as I got interest in it especially coz of system design. 
 
-Learn how to build APIs and how to integrate APIs with databases
+Learning how to build APIs and how to integrate APIs with databases
 
 This repo contains 3 main projects + several practice scripts
 
