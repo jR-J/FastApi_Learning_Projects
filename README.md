@@ -1,6 +1,8 @@
 A collection of beginner to intermediate FastAPI projects to Learn API development with python, SQLite
 ### WHY THE PROJECT
-Learn how to build APIs and how to integrate APIs with databases
+This repo is solely to help me learn Backend as I got interest in it especially coz of system design. 
+
+Learning how to build APIs and how to integrate APIs with databases
 
 This repo contains 3 main projects + several practice scripts
 
